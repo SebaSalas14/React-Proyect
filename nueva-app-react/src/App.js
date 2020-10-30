@@ -1,11 +1,12 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import "bootstrap/dist/css/bootstrap.css";
+import Modal from './components/modal/modal';
 
 function App() {
   return (
-    <div className="App">
-      
-    </div>
+    <Modal />
+
   );
 }
 
