@@ -7,6 +7,8 @@ import "bootstrap/dist/css/bootstrap.css";
 function ModalIngreso () {
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
+    /*Aqui deberia ir link?
+    <Link to = "Form"></Link>*/
     const handleShow = () => setShow(true);
     
     return(
@@ -14,14 +16,14 @@ function ModalIngreso () {
         <div className="bodyModal">
         <div className="d-flex align-items-center justify-content-center"
       style={{ height: "100vh" }}>  
-        <Button className="botonModal"  onClick= {handleShow}>
+        {/* <Button className="botonModal"  onClick= {handleShow}>
          Bienvenido, Haga click para ingresar su saldo 
-        </Button>
+        </Button> */}
         </div>
 
         <Modal className= "modalPrincipal"
         show={show}
-        onHide={handleClose}
+        onHide={handleShow}
         backdrop="static"
         keyboard={false}
         >
