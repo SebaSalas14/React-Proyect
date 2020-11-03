@@ -10,12 +10,16 @@ import "../../App.css";
       </button> */
 
 
-const Card = ({ gasto }) => {
+const Card = ({ gasto, removeGasto }) => {
   const { concepto,importe, id } = gasto;
   return (
     <div className="cita">
       <p>Concepto del Gasto: <span>{concepto}</span></p>
       <p>Importe del Gasto: <span>{importe}</span></p>
+    <button
+    className= "btn btn-danger" onClick={() => {removeGasto(id)}}>
+      Eliminar &times;
+    </button>
     </div>
   );
 }
