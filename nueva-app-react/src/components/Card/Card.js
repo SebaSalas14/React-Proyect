@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import "../../App.css";
+import "./card.css";
 
 /*const Card = ({ gasto, removeGasto })
  {/* <button
@@ -13,7 +14,7 @@ import "../../App.css";
 const Card = ({ gasto }) => {
   const { concepto,importe, id } = gasto;
   return (
-    <div className="cita">
+    <div className="card mb-3 gasto">
       <p>Concepto del Gasto: <span>{concepto}</span></p>
       <p>Importe del Gasto: <span>{importe}</span></p>
     </div>

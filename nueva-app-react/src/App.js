@@ -6,13 +6,14 @@ import Modal from './components/modal/modal';
 import FormCard from './components/FormCard/FormCard';
 // import Form from './components/Form/Form';
 // import Card from './components/card/card';
+import './index.css';
 
 function App() {
   return (
 
  <div>
-    <Modal/> 
-    <FormCard/>
+    
+    <FormCard />
     </div>
 
 
