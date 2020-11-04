@@ -4,7 +4,6 @@ body {
      width: 100%; 
      height: auto; 
 }
-
 h1, h2  {
   background-color: #0074C7 ;
   color: aliceblue;
@@ -12,13 +11,10 @@ h1, h2  {
   border-radius: 0.2em;
   text-align: center;
 }
-
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
 .conceptos {
   color: aliceblue;
   height: 25px;
