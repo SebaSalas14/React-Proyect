@@ -1,7 +1,7 @@
 
 import { Modal, Button, Form} from 'react-bootstrap';
 import React, { useState } from 'react';
-import "../Modal/Modal.css";
+import "./Modal.css";
 /* import "bootstrap/dist/css/bootstrap.css"; */
 
 function ModalIngreso () {

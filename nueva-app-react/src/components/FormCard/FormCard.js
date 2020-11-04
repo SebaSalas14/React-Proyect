@@ -1,7 +1,8 @@
 import React, { useState, useEffect} from 'react';
-/* import { v4 as uuid } from 'uuid'; */
-import Form from '../Form/Form';
+import { v4 as uuid } from 'uuid'; 
+import Form from '../Form/form';
 import Card from '../Card/Card';
+import "./FormCard.css";
 
 
 const FormCard = () => {
@@ -39,8 +40,8 @@ const FormCard = () => {
 
   return (
     <>
-           <h1>Administrador de Gastos</h1>
-      <div className="container">
+           <h2 className = "text-center bg-info">Administrador de Gastos</h2>
+      <div className="container body-container">
         <div className="row">
           <div className="col-6">
             <Form addGasto={addGasto} />

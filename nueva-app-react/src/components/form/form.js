@@ -63,7 +63,7 @@ const Form = ({ addGasto }) => {
           />
         </div>
         <div>
-          <button type="submit" className="w-100 d-block btn btn-primary">
+          <button type="submit" className="w-30 d-block btn btn-success">
             Añadir gasto
           </button>
         </div>

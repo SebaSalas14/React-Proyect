@@ -6,11 +6,12 @@ import Modal from './components/Modal/Modal';
 import FormCard from './components/FormCard/FormCard';
 // import Form from './components/Form/Form';
 // import Card from './components/card/card';
+import './index.css';
 
 function App() {
   return (
     <>
-    <Modal/> 
+    
     <FormCard/>
    </>
 
@@ -19,3 +20,4 @@ function App() {
 
 export default App;
 
+/*<Modal/> */
