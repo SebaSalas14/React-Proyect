@@ -1,6 +1,6 @@
 import React, { useState, useEffect} from 'react';
-/*import { v4 as uuid } from 'uuid';*/
-import Form from '../Form/Form';
+import { v4 as uuid } from 'uuid'; 
+import Form from '../Form/form';
 import Card from '../Card/Card';
 import "./FormCard.css";
 
@@ -19,11 +19,11 @@ const FormCard = () => {
         gasto
       ]);
     }
-  
-   /* const removeGasto = id => {
+  //Paso un id e identifico el gasto que quiero remover y las guardo dentro de mi state setGastos(gastosactulaizados)
+   const removeGasto = id => {
       const gastosActualizados = gastos.filter(gasto => gasto.id !== id );
-      setGastos(gastoActualizados);
-    }*/
+      setGastos(gastosActualizados);
+    }
   
     useEffect(() => {
       let gastosIniciales = JSON.parse(localStorage.getItem('gastos'));
@@ -55,7 +55,7 @@ const FormCard = () => {
                   <Card
                     key={index}
                     gasto={gasto}
-                    /*removeGasto={removeGasto}*/
+                    removeGasto={removeGasto}
                   />
                 )
               })

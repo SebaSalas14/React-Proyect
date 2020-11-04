@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-
-
+import { v4 as uuid } from 'uuid';
 
 const Form = ({ addGasto }) => {
 
@@ -26,7 +25,7 @@ const Form = ({ addGasto }) => {
       return
     }
     setError(false);
-    /*cita.id = uuid();*/
+    gasto.id = uuid();
     addGasto(gasto);
     setGasto({
       concepto: '',
@@ -56,7 +55,7 @@ const Form = ({ addGasto }) => {
         <div className="form-group">
           <label>Importe Gasto</label>
           <input
-            type="text"
+            type="number"
             name="importe"
             className="form-control"
             value={importe}
