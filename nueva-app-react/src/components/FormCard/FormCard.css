@@ -1,6 +1,7 @@
 .body-container {
-    background-color:#FAAF51;
+    background:transparent;
     padding:10px;
+    transform: translateY(20%);
     border-radius:3px;
 }
 

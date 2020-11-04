@@ -1,19 +1,25 @@
 body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-  background: url("https://vallejo-asesores.com/wp-content/uploads/2018/08/servicios-contabilidad-ecuador-460x290.jpg"); 
-  min-height: 100%;
-  padding-bottom: 5rem;
+     background: url("https://previews.123rf.com/images/grapestock/grapestock1501/grapestock150100047/35230476-cuadros-y-gr%C3%A1ficos-sobre-la-torre-y-mapa-de-fondo-financiero-y-de-negocios.jpg") no-repeat center center fixed; 
+     background-size: cover;
+     width: 100%; 
+     height: auto; 
 }
 
 h1, h2  {
-  color: white;
-  padding: 3rem 0;
+  background-color: #0074C7 ;
+  color: aliceblue;
+  padding: 0.5rem ;
+  border-radius: 0.2em;
   text-align: center;
 }
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.conceptos {
+  color: aliceblue;
+  height: 25px;
 }

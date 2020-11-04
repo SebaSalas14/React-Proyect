@@ -1,4 +1,7 @@
 .gasto{
-    background-color: azure;
+    background-color: transparent ;
     border-radius:3px;
+    margin: 0 auto;
+    text-align: center;
+    transform: translateY(30%);
 }

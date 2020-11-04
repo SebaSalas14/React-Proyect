@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { v4 as uuid } from 'uuid';
 
+
 const Form = ({ addGasto }) => {
 
   const [error, setError] = useState(false);
@@ -43,7 +44,7 @@ const Form = ({ addGasto }) => {
       }
       <form onSubmit={handleOnSubmit}>
         <div className="form-group">
-          <label>Concepto gasto</label>
+          <label className="conceptos">Concepto gasto</label>
           <input
             type="text"
             name="concepto"
@@ -53,7 +54,7 @@ const Form = ({ addGasto }) => {
           />
         </div>
         <div className="form-group">
-          <label>Importe Gasto</label>
+          <label className="conceptos">Importe Gasto</label>
           <input
             type="number"
             name="importe"

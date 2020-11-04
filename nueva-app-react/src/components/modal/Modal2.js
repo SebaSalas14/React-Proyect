@@ -1,50 +1,39 @@
-
 import { Modal, Button } from 'react-bootstrap';
 import React, { useState } from 'react';
 import "../Modal/Modal.css";
 /* import "bootstrap/dist/css/bootstrap.css"; */
 
 function ModalIngreso ({addMonto}) {
+    const [presupuesto, setPresupuesto] = useState('')
     const [show, setShow] = useState({open:true});
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
-
     const [error, setError] = useState(false);
-  const [presupuesto, setPresupuesto] = useState({
-    monto: '',
-   
-  })
 
-  const{monto}  = presupuesto;
 
   const handleOnChange = e => {
-    setPresupuesto({
-      ...presupuesto,
-      [e.target.name]: e.target.value
-    })
-  }
-
-    const handleOnSubmit = e => {
-      e.preventDefault();
-      if(presupuesto.trim() === '' ) {
-        setError(true);
-        return
-      }
-      setError(false);
-      /* gasto.id = uuid(); */
-       addMonto(presupuesto);
-      setPresupuesto({
-        monto: '',
-      })
+    const numberValue = e.target.value;
+    const Validation = /^([0-9])*$/;
+    if(numberValue > 0 || numberValue.test(Validation) )
+    {
+    setPresupuesto(e.target.value);
+    setError(false) }
+    else{
+    setError(true);}
     }
+    
+    const closeModal= () => {
+        if (show.open) {
+            show.open= false
+        }
+    }
+
     return(
         <> 
 
-        <div >
+        <div className="bodyModal">
         <Modal className= "modalPrincipal"
-       
-        show={show.open}
-        onHide={handleShow}
+        show={show.open} 
         backdrop="static"
         keyboard={false}
         >
@@ -52,18 +41,17 @@ function ModalIngreso ({addMonto}) {
           <Modal.Title>Bienvenido, Ingrese el monto de su presupuesto mensual</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-              <form onSubmit={handleOnSubmit} > 
-               <input className="modalInput" type="number"  min="0"  placeholder="Ingrese su saldo" required
-               onChange={handleOnChange}
+              <form > 
+               <input className="modalInput" type="number" value={presupuesto} onChange={handleOnChange} min="0"  placeholder="Ingrese su saldo" required
                 />               
                 </form>
             
         </Modal.Body>
         <Modal.Footer>
           <Button variant="primary" type="submit"   >
-            Ingresar presupuesto
+            Ingresar monto
           </Button>
-          
+          <Button variant="secondary" onClick={handleClose}>Cancelar operacion</Button>
         </Modal.Footer>
       </Modal>
         </div>

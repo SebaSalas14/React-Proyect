@@ -1,5 +1,4 @@
 import React, { useState, useEffect} from 'react';
-import { v4 as uuid } from 'uuid'; 
 import Form from '../Form/form';
 import Card from '../Card/Card';
 import "./FormCard.css";
@@ -40,7 +39,7 @@ const FormCard = () => {
 
   return (
     <>
-           <h2 className = "text-center bg-info">Administrador de Gastos</h2>
+           <h2 className = "text-center ">Administrador de Gastos</h2>
       <div className="container body-container">
         <div className="row">
           <div className="col-6">
